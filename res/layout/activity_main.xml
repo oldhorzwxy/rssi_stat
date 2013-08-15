@@ -1,0 +1,104 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical"
+              tools:context=".SearchingActivity" >
+
+    <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/scrollView"
+            android:layout_gravity="center">
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+            <TextView
+                    android:id="@+id/searching_status"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:textSize="20sp"
+                    android:gravity="center"
+                    android:text="@string/searching_status" />
+
+            <LinearLayout
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:orientation="horizontal">
+
+                <Button
+                        android:id="@+id/searching_start"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/searching_start" />
+
+                <Button
+                        android:id="@+id/searching_stop"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/searching_stop" />
+
+                <Button
+                        android:id="@+id/searching_enable_clock"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/searching_enable_clock"/>
+
+                <Button
+                        android:id="@+id/searching_quit"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/quit" />
+
+                <Button
+                    android:id="@+id/searching_clear"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/clear"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:orientation="horizontal">
+
+                <Spinner
+                        android:id="@+id/spinner"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+
+                <EditText
+                        android:id="@+id/input_distence"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:hint="@string/searching_distance"
+                        android:text="@string/searching_distance_value"/>
+
+                <EditText
+                        android:id="@+id/input_clock"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:hint="@string/searching_clock"
+                        android:text="@string/searching_clock_value"/>
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                    android:id="@+id/searching_graph_board"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:orientation="vertical">
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

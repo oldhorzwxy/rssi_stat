@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Rssi_Stat</string>
+    <string name="action_settings">Settings</string>
+
+    <!-- searching activity -->
+    <string name="searching_status">Ready to search.</string>
+    <string name="searching_start">start</string>
+    <string name="searching_stop">stop</string>
+    <string name="searching_enable_clock">enable clock</string>
+    <string name="searching_add_device">add</string>
+    <string name="quit">quit</string>
+    <string name="clear">c</string>
+    <string name="searching_distance">input distance</string>
+    <string name="searching_distance_value">50</string>
+    <string name="searching_name">input name</string>
+    <string name="searching_name_value">87654325</string>
+    <string name="searching_clock">clock</string>
+    <string name="searching_clock_value">5000</string>
+
+</resources>
