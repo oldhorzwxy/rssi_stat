@@ -37,6 +37,7 @@ public class MainActivity extends Activity {
   private Button quitButton;
   private Button clearButton;
   private Spinner spinner;
+  private TotalTable totalTable;
   // status
   private boolean clockEnabled;
   // tools
@@ -46,7 +47,9 @@ public class MainActivity extends Activity {
   private HashMap< String, ArrayList< RecordItem > > recordMap;
   private HashMap< String, HashMap< Integer, Integer > > rssiMap;
   private HashMap< String, StatTable > tableMap;
+  private HashMap< String, Integer > averageMap;
   private List< String > deviceList;
+  private List< String > spinnerItemList;
   private int searchid;
   // fields about local Bluetooth device model
   private BluetoothAdapter mBluetoothAdapter; // local Bluetooth device model
@@ -116,7 +119,12 @@ public class MainActivity extends Activity {
     rssiMap = new HashMap<String, HashMap<Integer, Integer>>();
     deviceList = new ArrayList<String>();
     tableMap = new HashMap<String, StatTable>();
+    averageMap = new HashMap<String, Integer>();
     clearButton = ( Button )findViewById( R.id.searching_clear );
+    spinnerItemList = new ArrayList<String>();
+    totalTable = new TotalTable( this, averageMap );
+
+    spinnerItemList.add( "total" );
 
     // initialize the maps
     for( int i = 22; i <= 31; i++ ) {
@@ -128,7 +136,11 @@ public class MainActivity extends Activity {
       tableMap.put( s, new StatTable( this ) );
       recordMap.put( s, new ArrayList<RecordItem>() );
       rssiMap.put( s, new HashMap<Integer, Integer>() );
+      spinnerItemList.add( s );
+      averageMap.put( s, 0 );
     }
+
+
 
     // build up local Bluetooth device model
     mBluetoothAdapter = BluetoothAdapter.getDefaultAdapter();  // get the Bluetooth adapter for this device
@@ -234,20 +246,25 @@ public class MainActivity extends Activity {
       }
     });
 
-    ArrayAdapter< String > spinnerAdapter = new ArrayAdapter<String>( this, android.R.layout.simple_spinner_item, deviceList );
+    ArrayAdapter< String > spinnerAdapter = new ArrayAdapter<String>( this, android.R.layout.simple_spinner_item, spinnerItemList );
     spinner.setAdapter( spinnerAdapter );
     spinner.setOnItemSelectedListener( new AdapterView.OnItemSelectedListener() {
       @Override
       public void onItemSelected(AdapterView<?> adapterView, View view, int pos, long l) {
 
-        String item = ( String )spinner.getItemAtPosition( pos );
-        LinearLayout layout = getGraphBoard( recordMap.get( item ), rssiMap.get( item ), tableMap.get( item ) );
         LinearLayout board = (LinearLayout) findViewById(R.id.searching_graph_board);
         if( board.getChildCount() != 0 ) {
           ( ( LinearLayout )( board.getChildAt(0) ) ).removeAllViews();
         }
         board.removeAllViews();
-        board.addView(layout);
+
+        String item = ( String )spinner.getItemAtPosition( pos );
+        if( item.equals( "total" ) ) {
+          board.addView( totalTable );
+        }
+        else {
+          board.addView( getGraphBoard( recordMap.get( item ), rssiMap.get( item ), tableMap.get( item ) ) );
+        }
       }
 
       @Override
@@ -382,14 +399,14 @@ public class MainActivity extends Activity {
     System.out.println( recordMap.keySet().size() );
     while( iterator.hasNext() ) {
       String name = iterator.next();
-      doStat( rssiMap.get( name ), tableMap.get( name ), name );
+      doStat( rssiMap.get( name ), tableMap.get( name ), name, averageMap, searchid );
     }
     if( clock != null ) {
       onStartScan();
     }
   }
 
-  private void doStat( HashMap< Integer, Integer > distribution, StatTable table, String name ) {
+  private void doStat( HashMap< Integer, Integer > distribution, StatTable table, String name, HashMap< String, Integer > averageMap, int searchid ) {
     // get first half
     /*Iterator< ArrayList< RecordItem > > iterator = recordsOnGraph.values().iterator();
     int size = 0;
@@ -550,6 +567,10 @@ public class MainActivity extends Activity {
 
       table.addView( row );
 
+      // do total stat
+      averageMap.put( name, ( averageMap.get( name ) * ( searchid - 1 ) + average ) / searchid );
+      totalTable.updateTable( averageMap );
+
       statWriter.write( name + "," + searchid + "," + average + "," + lastPeak + ";" + thirdPeak + "," + ave2 + "," + firstStrongest + ";" + secondStrongest
           + ";" + thirdStrongest + "," + ave3 + "," + middle + "\n" );
     }
@@ -646,6 +667,45 @@ public class MainActivity extends Activity {
       TextView t = new TextView( getContext());
       t.setText(s);
       addView(t);
+    }
+  }
+
+  class TotalTable extends TableLayout {
+    StatTableRow titleBar;
+
+    TotalTable( Context context, HashMap< String, Integer > aveMap ) {
+      super( context );
+
+      titleBar = new StatTableRow( context );
+      titleBar.addBlock( "name" );
+      titleBar.addBlock( "average" );
+
+      TreeSet< String > keySet = new TreeSet<String>( aveMap.keySet() );
+      while( keySet.size() > 0 ) {
+        String name = keySet.pollLast();
+        addRow( name, aveMap.get( name ) );
+      }
+    }
+
+    void clearRows() {
+      removeAllViews();
+      addView( titleBar );
+    }
+
+    void addRow( String name, int average ) {
+      StatTableRow row = new StatTableRow( getContext() );
+      row.addBlock( name );
+      row.addBlock( average + "" );
+      addView( row );
+    }
+
+    void updateTable( HashMap< String, Integer > aveMap ) {
+      clearRows();
+      TreeSet< String > keySet = new TreeSet<String>( aveMap.keySet() );
+      while( keySet.size() > 0 ) {
+        String name = keySet.pollLast();
+        addRow( name + "\t\t\t\t", aveMap.get( name ) );
+      }
     }
   }
 }

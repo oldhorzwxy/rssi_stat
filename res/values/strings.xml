@@ -17,6 +17,6 @@
     <string name="searching_name">input name</string>
     <string name="searching_name_value">87654325</string>
     <string name="searching_clock">clock</string>
-    <string name="searching_clock_value">5000</string>
+    <string name="searching_clock_value">2000</string>
 
 </resources>

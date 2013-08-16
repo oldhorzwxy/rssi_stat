@@ -177,15 +177,12 @@
       <file leaf-file-name="MainActivity.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/cn/navior/tool/rssi_stat/MainActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="633" column="4" selection-start="22970" selection-end="22970" vertical-scroll-proportion="0.4034268" vertical-offset="13840" max-vertical-offset="14651">
+            <state line="265" column="10" selection-start="10142" selection-end="10142" vertical-scroll-proportion="0.6895787" vertical-offset="5393" max-vertical-offset="15962">
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#8541#8796#0" expanded="true" />
-                <element signature="e#8789#8790#0" expanded="true" />
-                <element signature="e#9040#9048#0" expanded="true" />
-                <element signature="e#14908#14917#0" expanded="true" />
-                <element signature="e#15199#15208#0" expanded="true" />
-                <element signature="e#15720#15729#0" expanded="true" />
+                <element signature="e#9414#9422#0" expanded="true" />
+                <element signature="e#24326#24334#0" expanded="true" />
+                <element signature="e#24892#24900#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -194,7 +191,7 @@
       <file leaf-file-name="DistributionGraph.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/cn/navior/tool/rssi_stat/DistributionGraph.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="58" column="34" selection-start="1793" selection-end="1793" vertical-scroll-proportion="0.0" vertical-offset="1311" max-vertical-offset="2208">
+            <state line="58" column="34" selection-start="1793" selection-end="1793" vertical-scroll-proportion="0.0" vertical-offset="874" max-vertical-offset="1771">
               <folding />
             </state>
           </provider>
@@ -233,7 +230,7 @@
       <file leaf-file-name="strings.xml" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/res/values/strings.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="13" column="26" selection-start="526" selection-end="526" vertical-scroll-proportion="-11.48" vertical-offset="12" max-vertical-offset="644">
+            <state line="19" column="42" selection-start="858" selection-end="858" vertical-scroll-proportion="-9.28" vertical-offset="205" max-vertical-offset="644">
               <folding />
             </state>
           </provider>
@@ -265,8 +262,8 @@
         <option value="$PROJECT_DIR$/src/cn/navior/tool/rssi_stat/RecordItem.java" />
         <option value="$PROJECT_DIR$/src/cn/navior/tool/rssi_stat/WaveGraph.java" />
         <option value="$PROJECT_DIR$/src/cn/navior/tool/rssi_stat/DistributionGraph.java" />
-        <option value="$PROJECT_DIR$/res/values/strings.xml" />
         <option value="$PROJECT_DIR$/res/layout/activity_main.xml" />
+        <option value="$PROJECT_DIR$/res/values/strings.xml" />
         <option value="$PROJECT_DIR$/src/cn/navior/tool/rssi_stat/MainActivity.java" />
       </list>
     </option>
@@ -303,6 +300,8 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -391,8 +390,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -405,6 +402,7 @@
     <property name="project.structure.side.proportion" value="0.0" />
     <property name="MemberChooser.copyJavadoc" value="false" />
     <property name="GoToClass.toSaveIncludeLibraries" value="false" />
+    <property name="AndroidTargetDevices" value="4d009e0651b73103" />
     <property name="restartRequiresConfirmation" value="true" />
     <property name="FullScreen" value="false" />
     <property name="MemberChooser.showClasses" value="true" />
@@ -581,7 +579,7 @@
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2054429" sideWeight="0.75303197" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2054429" sideWeight="0.5414365" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.38674033" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.52154696" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
@@ -589,13 +587,13 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32928178" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24751382" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.45856354" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32928178" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.17235859" sideWeight="0.75248617" order="3" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.17235859" sideWeight="0.5414365" order="3" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32928178" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Problems" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -679,12 +677,9 @@
         <state line="73" column="9" selection-start="3009" selection-end="3009" vertical-scroll-proportion="0.0" vertical-offset="2346" max-vertical-offset="14904">
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#8541#8796#0" expanded="true" />
-            <element signature="e#8789#8790#0" expanded="true" />
-            <element signature="e#9040#9048#0" expanded="true" />
-            <element signature="e#14908#14917#0" expanded="true" />
-            <element signature="e#15199#15208#0" expanded="true" />
-            <element signature="e#15720#15729#0" expanded="true" />
+            <element signature="e#9414#9422#0" expanded="true" />
+            <element signature="e#24326#24334#0" expanded="true" />
+            <element signature="e#24892#24900#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -760,20 +755,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/cn/navior/tool/rssi_stat/DistributionGraph.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="58" column="34" selection-start="1793" selection-end="1793" vertical-scroll-proportion="0.0" vertical-offset="702" max-vertical-offset="1955">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/res/values/strings.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="26" selection-start="526" selection-end="526" vertical-scroll-proportion="-11.48" vertical-offset="12" max-vertical-offset="644">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/res/layout/activity_main.xml">
       <provider editor-type-id="android-designer">
         <state />
@@ -784,17 +765,28 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/res/values/strings.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="19" column="42" selection-start="858" selection-end="858" vertical-scroll-proportion="-9.28" vertical-offset="205" max-vertical-offset="644">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/cn/navior/tool/rssi_stat/DistributionGraph.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="58" column="34" selection-start="1793" selection-end="1793" vertical-scroll-proportion="0.0" vertical-offset="874" max-vertical-offset="1771">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/cn/navior/tool/rssi_stat/MainActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="633" column="4" selection-start="22970" selection-end="22970" vertical-scroll-proportion="0.4034268" vertical-offset="13840" max-vertical-offset="14651">
+        <state line="265" column="10" selection-start="10142" selection-end="10142" vertical-scroll-proportion="0.6895787" vertical-offset="5393" max-vertical-offset="15962">
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#8541#8796#0" expanded="true" />
-            <element signature="e#8789#8790#0" expanded="true" />
-            <element signature="e#9040#9048#0" expanded="true" />
-            <element signature="e#14908#14917#0" expanded="true" />
-            <element signature="e#15199#15208#0" expanded="true" />
-            <element signature="e#15720#15729#0" expanded="true" />
+            <element signature="e#9414#9422#0" expanded="true" />
+            <element signature="e#24326#24334#0" expanded="true" />
+            <element signature="e#24892#24900#0" expanded="true" />
           </folding>
         </state>
       </provider>
